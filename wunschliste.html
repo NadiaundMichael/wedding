@@ -11,10 +11,9 @@
     body {
       background-color: #f9f5f0;
       font-family: 'Montserrat', sans-serif;
-      color: #5a4a3a;
+      color: #5C6B4F;
     }
 
-    /* NAV */
     nav {
       background-color: #f9f5f0;
       border-bottom: 1px solid #e8d5c0;
@@ -31,23 +30,24 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.3rem;
       letter-spacing: 0.15em;
-      color: #c17a4a;
+      color: #C96A3A;
     }
 
     .nav-links a {
       font-size: 0.75rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #5a4a3a;
+      color: #5C6B4F;
       text-decoration: none;
       margin-left: 32px;
       transition: color 0.3s;
     }
 
     .nav-links a:hover,
-    .nav-links a.active { color: #c17a4a; }
+    .nav-links a.active { color: #C96A3A; }
 
-    /* HERO */
+    .nav-dinner { display: none; }
+
     .hero {
       text-align: center;
       padding: 80px 20px 60px;
@@ -57,7 +57,7 @@
       font-size: 0.7rem;
       letter-spacing: 0.3em;
       text-transform: uppercase;
-      color: #c17a4a;
+      color: #D4956A;
       margin-bottom: 16px;
     }
 
@@ -65,7 +65,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(2.5rem, 6vw, 4rem);
       font-weight: 300;
-      color: #5a4a3a;
+      color: #C96A3A;
       letter-spacing: 0.1em;
       line-height: 1.2;
     }
@@ -73,11 +73,17 @@
     .hero-divider {
       width: 60px;
       height: 1px;
-      background: #c17a4a;
+      background: #C96A3A;
       margin: 24px auto;
     }
 
-    /* INTRO TEXT */
+    .hero-tagline {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #5C6B4F;
+    }
+
     .intro {
       max-width: 640px;
       margin: 0 auto;
@@ -85,28 +91,24 @@
       text-align: center;
       font-size: 0.82rem;
       line-height: 1.9;
-      color: #7a6a5a;
+      color: #5C6B4F;
       font-weight: 300;
     }
 
-    .intro p + p {
-      margin-top: 16px;
-    }
+    .intro p + p { margin-top: 16px; }
 
-    /* WUNSCHLISTE EMBED PLACEHOLDER */
     .wunschliste-section {
       max-width: 900px;
       margin: 0 auto;
-      padding: 0 20px 100px;
+      padding: 0 20px 80px;
     }
 
     .wunschliste-placeholder {
       background: #fff8f3;
-      border: 1px dashed #c17a4a;
+      border: 1px dashed #C96A3A;
       border-radius: 4px;
       padding: 80px 40px;
       text-align: center;
-      color: #c17a4a;
     }
 
     .wunschliste-placeholder .icon {
@@ -119,17 +121,15 @@
       font-size: 1.6rem;
       font-weight: 300;
       margin-bottom: 12px;
-      color: #5a4a3a;
+      color: #C96A3A;
     }
 
     .wunschliste-placeholder p {
       font-size: 0.78rem;
-      color: #7a6a5a;
+      color: #5C6B4F;
       line-height: 1.8;
-      letter-spacing: 0.05em;
     }
 
-    /* TWINT / BANK SECTION */
     .zahlung-section {
       max-width: 860px;
       margin: 0 auto;
@@ -156,7 +156,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.4rem;
       font-weight: 400;
-      color: #c17a4a;
+      color: #D4956A;
       letter-spacing: 0.1em;
       margin-bottom: 16px;
     }
@@ -164,19 +164,18 @@
     .zahlung-card p {
       font-size: 0.78rem;
       line-height: 1.9;
-      color: #7a6a5a;
+      color: #5C6B4F;
       font-weight: 300;
     }
 
     .zahlung-card .detail {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1rem;
-      color: #5a4a3a;
+      color: #C96A3A;
       margin-top: 12px;
       line-height: 1.7;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -184,19 +183,20 @@
       font-size: 0.65rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
-      color: #c17a4a;
+      color: #C96A3A;
       line-height: 2.2;
     }
 
     footer .trauzeugen {
       margin-top: 10px;
       font-size: 0.62rem;
-      color: #7a6a5a;
+      color: #5C6B4F;
       letter-spacing: 0.15em;
+      text-transform: none;
     }
 
     footer .trauzeugen a {
-      color: #c17a4a;
+      color: #C96A3A;
       text-decoration: none;
     }
 
@@ -214,26 +214,23 @@
     <div class="nav-links">
       <a href="ueberuns.html">Über uns</a>
       <a href="apero.html">Apéro</a>
-      <a href="dinner.html">Dinner</a>
+      <a href="dinner.html" class="nav-dinner">Dinner</a>
       <a href="wunschliste.html" class="active">Wunschliste</a>
     </div>
   </nav>
 
-  <!-- HERO -->
   <div class="hero">
     <p class="hero-sub">17. Juli 2027</p>
     <h1>Wunschliste</h1>
     <div class="hero-divider"></div>
-    <p style="font-size:0.75rem; letter-spacing:0.2em; text-transform:uppercase; color:#7a6a5a;">Unsere Wünsche für den Start ins gemeinsame Leben</p>
+    <p class="hero-tagline">Unsere Wünsche für den Start ins gemeinsame Leben</p>
   </div>
 
-  <!-- INTRO -->
   <section class="intro">
     <p>Das grösste Geschenk ist, dass ihr an unserem Tag dabei seid. Wer uns trotzdem eine Freude machen möchte, findet hier unsere Wunschliste.</p>
     <p>Ihr könnt gerne auch zu einem grösseren Wunsch gemeinsam beitragen — jeder Betrag ist willkommen und von Herzen geschätzt.</p>
   </section>
 
-  <!-- WUNSCHLISTE EMBED -->
   <section class="wunschliste-section">
     <div class="wunschliste-placeholder">
       <div class="icon">🎁</div>
@@ -242,7 +239,6 @@
     </div>
   </section>
 
-  <!-- ZAHLUNGSMÖGLICHKEITEN -->
   <section class="zahlung-section">
     <div class="zahlung-card">
       <div class="icon">📱</div>
@@ -264,7 +260,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     Nadia &amp; Michael · 17.07.2027 · nadiaundmichael.ch
     <div class="trauzeugen">
@@ -274,6 +269,13 @@
       Daniel: <a href="tel:+41786121311">+41 78 612 13 11</a>
     </div>
   </footer>
+
+  <script>
+    // Show Dinner tab only for Dinner guests
+    if (localStorage.getItem('guestType') === 'dinner') {
+      document.querySelector('.nav-dinner').style.display = 'inline';
+    }
+  </script>
 
 </body>
 </html>
