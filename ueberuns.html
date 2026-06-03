@@ -46,6 +46,8 @@
     .nav-links a:hover,
     .nav-links a.active { color: #C96A3A; }
 
+    .nav-dinner { display: none; }
+
     .hero {
       text-align: center;
       padding: 80px 20px 60px;
@@ -256,7 +258,7 @@
     <div class="nav-links">
       <a href="ueberuns.html" class="active">Über uns</a>
       <a href="apero.html">Apéro</a>
-      <a href="dinner.html">Dinner</a>
+      <a href="dinner.html" class="nav-dinner">Dinner</a>
       <a href="wunschliste.html">Wunschliste</a>
     </div>
   </nav>
@@ -341,6 +343,13 @@
       Daniel: <a href="tel:+41786121311">+41 78 612 13 11</a>
     </div>
   </footer>
+
+  <script>
+    // Show Dinner tab only for Dinner guests
+    if (localStorage.getItem('guestType') === 'dinner') {
+      document.querySelector('.nav-dinner').style.display = 'inline';
+    }
+  </script>
 
 </body>
 </html>
