@@ -270,6 +270,36 @@
       .info-section { grid-template-columns: 1fr; }
       .dresscode-grid { grid-template-columns: 1fr; }
     }
+
+    .color-palette {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+
+.color-swatch {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid rgba(0,0,0,0.08);
+  cursor: default;
+  transition: transform 0.2s;
+}
+
+.color-swatch:hover {
+  transform: scale(1.2);
+}
+
+.dresscode-hinweis {
+  margin-top: 24px;
+  font-size: 0.75rem;
+  color: #5C6B4F;
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+    
   </style>
 </head>
 <body>
@@ -323,22 +353,37 @@
   </section>
 
   <section class="dresscode-section">
-    <div class="dresscode-box">
-      <span class="label">Outfit des Abends</span>
-      <h3>Dresscode</h3>
-      <p class="sub">Sommerlich elegant – kurz oder lang</p>
-      <div class="dresscode-grid">
-        <div class="dresscode-item sie">
-          <strong>Sie</strong>
-          Apricot- und Pfirsichtöne
+  <div class="dresscode-box">
+    <span class="label">Outfit des Abends</span>
+    <h3>Dresscode</h3>
+    <p class="sub">Sommerlich elegant – kurz oder lang</p>
+    <div class="dresscode-grid">
+      <div class="dresscode-item sie">
+        <strong>Sie</strong>
+        Apricot- und Pfirsichtöne
+        <div class="color-palette">
+          <span class="color-swatch" style="background:#FFDAB9;" title="Peach"></span>
+          <span class="color-swatch" style="background:#FFBF8C;" title="Apricot"></span>
+          <span class="color-swatch" style="background:#E8956D;" title="Terracotta"></span>
+          <span class="color-swatch" style="background:#F5CBA7;" title="Blush"></span>
+          <span class="color-swatch" style="background:#FAE5D3;" title="Nude"></span>
         </div>
-        <div class="dresscode-item er">
-          <strong>Er</strong>
-          Beige- und Grüntöne
+      </div>
+      <div class="dresscode-item er">
+        <strong>Er</strong>
+        Beige- und Grüntöne
+        <div class="color-palette">
+          <span class="color-swatch" style="background:#E8DCC8;" title="Sand"></span>
+          <span class="color-swatch" style="background:#C9B99A;" title="Beige"></span>
+          <span class="color-swatch" style="background:#8FAF7E;" title="Salbei"></span>
+          <span class="color-swatch" style="background:#5C6B4F;" title="Waldgrün"></span>
+          <span class="color-swatch" style="background:#D4C9A8;" title="Khaki"></span>
         </div>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
 
   <section class="rsvp-section">
     <span class="label">Anmeldung</span>
