@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nadia & Michael – Apéro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600&family=Montserrat:wght@300;400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --cream:          #f5f0eb;
+      --apricot:        #C96A3A;
+      --apricot-light:  #D4956A;
+      --terracotta:     #a8522a;
+      --sage:           #5C6B4F;
+      --gold:           #D4956A;
+      --text-dark:      #3a2e28;
+      --text-mid:       #5C6B4F;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: var(--cream);
+      color: var(--text-dark);
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 300;
+    }
+
+    /* ── NAVIGATION ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background-color: rgba(245, 240, 235, 0.95);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--apricot-light);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text-mid);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+    }
+
+    nav a:hover, nav a.active { color: var(--apricot); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 45vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+    }
+
+    .hero-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-names {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      font-weight: 300;
+      color: var(--apricot);
+      letter-spacing: 0.15em;
+      line-height: 1.1;
+    }
+
+    .hero-ampersand {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: var(--gold);
+      display: block;
+      margin: 0.2em 0;
+    }
+
+    .hero-subtitle {
+      font-size: 0.7rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      margin-top: 1.5rem;
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 80px;
+      height: 1px;
+      background: var(--apricot-light);
+      margin: 2.5rem auto;
+    }
+
+    .divider-floral {
+      text-align: center;
+      color: var(--apricot-light);
+      margin: 1rem 0;
+      font-size: 1rem;
+      letter-spacing: 0.5em;
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .section-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 300;
+      color: var(--apricot);
+      letter-spacing: 0.1em;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-text {
+      font-size: 0.9rem;
+      line-height: 2;
+      color: var(--text-mid);
+      font-weight: 300;
+    }
+
+    /* ── INFO BOX ── */
+    .info-box {
+      background: white;
+      border: 1px solid var(--apricot-light);
+      padding: 2.5rem;
+      margin-top: 2rem;
+      text-align: left;
+    }
+
+    .info-box-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      color: var(--apricot);
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid rgba(212, 149, 106, 0.2);
+      gap: 1rem;
+    }
+
+    .info-row:last-child { border-bottom: none; }
+
+    .info-row-label {
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      flex-shrink: 0;
+      padding-top: 0.1rem;
+    }
+
+    .info-row-value {
+      font-size: 0.85rem;
+      color: var(--text-mid);
+      text-align: right;
+      line-height: 1.7;
+    }
+
+    /* ── ABLAUF KARTE ── */
+    .ablauf-card {
+      background: white;
+      border: 1px solid var(--apricot-light);
+      padding: 2rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 1.5rem;
+      text-align: left;
+      margin-top: 1rem;
+    }
+
+    .ablauf-time {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      color: var(--apricot-light);
+      min-width: 60px;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+
+    .ablauf-content h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      color: var(--apricot);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.3rem;
+      font-weight: 400;
+    }
+
+    .ablauf-content p {
+      font-size: 0.82rem;
+      line-height: 1.8;
+      color: var(--text-mid);
+    }
+
+    .ablauf-location {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 0.4rem;
+    }
+
+    /* ── MAP BUTTON ── */
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 1.5rem;
+      padding: 0.8rem 2rem;
+      background: transparent;
+      border: 1px solid var(--apricot);
+      color: var(--apricot);
+      text-decoration: none;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      transition: all 0.3s;
+    }
+
+    .map-btn:hover {
+      background: var(--apricot);
+      color: white;
+    }
+
+    /* ── FOTO ── */
+    .location-photo {
+      width: 100%;
+      border-radius: 2px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(160, 82, 45, 0.1);
+      margin-top: 1.5rem;
+    }
+
+    .location-photo img {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-placeholder {
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(135deg, var(--apricot-light) 0%, var(--cream) 100%);
+      border: 1px dashed var(--apricot-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-mid);
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-top: 1.5rem;
+    }
+
+    /* ── RSVP ── */
+    .rsvp-section {
+      background: white;
+      border: 1px solid var(--apricot-light);
+      padding: 3rem 2rem;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .rsvp-deadline {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      margin-bottom: 2rem;
+      line-height: 2;
+    }
+
+    .rsvp-deadline strong {
+      color: var(--apricot);
+    }
+
+    .btn-rsvp {
+      display: inline-block;
+      padding: 1.1rem 3rem;
+      background: var(--apricot);
+      color: white;
+      text-decoration: none;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      border: 1px solid var(--apricot);
+      transition: all 0.3s;
+    }
+
+    .btn-rsvp:hover {
+      background: var(--terracotta);
+      border-color: var(--terracotta);
+    }
+
+    .rsvp-contact {
+      margin-top: 2rem;
+      font-size: 0.8rem;
+      color: var(--text-mid);
+      line-height: 2;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center;
+      padding: 3rem 2rem;
+      border-top: 1px solid var(--apricot-light);
+      margin-top: 4rem;
+    }
+
+    .footer-names {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      color: var(--apricot);
+      letter-spacing: 0.2em;
+    }
+
+    .footer-text {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text-mid);
+      margin-top: 0.8rem;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      nav { gap: 1rem; flex-wrap: wrap; font-size: 0.6rem; }
+      .ablauf-card { flex-direction: column; gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION: Apéro-Gäste sehen kein Dinner -->
+  <nav>
+    <a href="index.html">Start</a>
+    <a href="apero.html" class="active">Apéro</a>
+    <a href="wunschliste.html">Wunschliste</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <p class="hero-label">Ihr seid zum Apéro eingeladen</p>
+    <div class="hero-names">
+      NADIA
+      <span class="hero-ampersand">&</span>
+      MICHAEL
+    </div>
+    <p class="hero-subtitle">17 · 07 · 2027</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- EINLADUNGSTEXT -->
+  <section>
+    <p class="section-label">Herzlich Willkommen</p>
+    <h2 class="section-title">Wir heiraten!</h2>
+    <p class="section-text">
+      Wir laden euch ganz herzlich zu unserer Hochzeit ein.<br/>
+      Feiert mit uns diesen besonderen Tag!
+    </p>
+  </section>
+
+  <div class="divider-floral">✦ ✦ ✦</div>
+
+  <!-- ABLAUF -->
+  <section>
+    <p class="section-label">Euer Tag</p>
+    <h2 class="section-title">Ablauf</h2>
+
+    <div class="ablauf-card">
+      <div class="ablauf-time">14h</div>
+      <div class="ablauf-content">
+        <h3>Apéro</h3>
+        <p>Wir freuen uns, mit euch anzustossen und diesen besonderen Tag gemeinsam zu beginnen.</p>
+        <p class="ablauf-location">📍 TBD · Frauenfeld</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-floral">✦ ✦ ✦</div>
+
+  <!-- APÉRO DETAILS -->
+  <section>
+    <p class="section-label">Apéro</p>
+    <h2 class="section-title">14 Uhr · Frauenfeld</h2>
+
+    <div class="info-box">
+      <div class="info-box-title">Informationen</div>
+      <div class="info-row">
+        <span class="info-row-label">Zeit</span>
+        <span class="info-row-value">14:00 Uhr</span>
+      </div>
+      <div class="info-row">
+        <span class="info-row-label">Ort</span>
+        <span class="info-row-value">
+          TBD · Frauenfeld<br/>
+          <em style="font-size:0.75rem; color:var(--apricot-light);">Adresse folgt in Kürze</em>
+        </span>
+      </div>
+      <div class="info-row">
+        <span class="info-row-label">Anfahrt</span>
+        <span class="info-row-value">Wird noch bekanntgegeben</span>
+      </div>
+    </div>
+
+    <!--
+      ANLEITUNG: Sobald die Apéro-Location bekannt ist:
+      1. Adresse oben eintragen
+      2. Google Maps Link unten anpassen
+      3. photo-placeholder ersetzen mit:
+         <div class="location-photo">
+           <img src="apero-location.jpg" alt="Apéro Location" />
+         </div>
+    -->
+    <div class="photo-placeholder">📍 Karte & Foto folgen sobald Location bekannt</div>
+
+    <a href="https://maps.google.com/?q=Frauenfeld"
+       target="_blank" class="map-btn">
+      📍 Frauenfeld in Google Maps
+    </a>
+  </section>
+
+  <div class="divider-floral">✦ ✦ ✦</div>
+
+  <!-- RSVP -->
+  <section>
+    <p class="section-label">Anmeldung</p>
+    <h2 class="section-title">Bitte gebt uns Bescheid</h2>
+
+    <div class="rsvp-section">
+      <p class="rsvp-deadline">
+        Bitte bis zum <strong>31. März 2027</strong> anmelden<br/>
+        Wir freuen uns auf eure Rückmeldung!
+      </p>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScpeH6tp2maiEYcViqHFCe-tiYBKmNYS4B47XQoLdVbw0OXLA/viewform?usp=publish-editor"
+         target="_blank"
+         class="btn-rsvp">
+        Jetzt anmelden
+      </a>
+
+      <p class="rsvp-contact">
+        Bei Fragen wendet euch an unsere Trauzeugen:<br/>
+        Julia: +41 79 409 43 98 · Daniel: +41 78 612 13 11
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-names">Nadia & Michael</div>
+    <p class="footer-text">17 · 07 · 2027</p>
+  </footer>
+
+</body>
+</html>
