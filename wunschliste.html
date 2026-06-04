@@ -5,36 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nadia & Michael – Wunschliste</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="styles.css"/>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
-    body {
-      background-color: #f9f5f0;
-      font-family: 'Montserrat', sans-serif;
+    .intro {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
+      text-align: center;
+      font-size: 0.82rem;
+      line-height: 1.9;
       color: #5C6B4F;
+      font-weight: 300;
     }
 
-    nav {
-      background-color: #f9f5f0;
-      border-bottom: 1px solid #e8d5c0;
-      padding: 18px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    .intro p + p { margin-top: 16px; }
+
+    .wunschliste-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
     }
 
-    .nav-logo {
+    .wunschliste-placeholder {
+      background: #fff8f3;
+      border: 1px dashed #C96A3A;
+      border-radius: 4px;
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .wunschliste-placeholder .icon {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .wunschliste-placeholder h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.3rem;
-      letter-spacing: 0.15em;
+      font-size: 1.6rem;
+      font-weight: 300;
+      margin-bottom: 12px;
       color: #C96A3A;
     }
 
-    .nav-links a {
-      font-size: 0.75rem;
+    .wunschliste-placeholder p {
+      font-size: 0.78rem;
+      color: #5C6B4F;
+      line-height: 1.8;
+    }
+
+    .zahlung-section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px 100px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    .zahlung-card .detail {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      color: #C96A3A;
+      margin-top: 12px;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 600px) {
+      .zahlung-section { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">N & M</div>
+    <div class="nav-links">
+      <a href="ueberuns.html"    class="nav-ueber">Über uns</a>
+      <a href="apero.html"       class="nav-apero">Apéro</a>
+      <a href="dinner.html"      class="nav-dinner">Dinner</a>
+      <a href="wunschliste.html" class="nav-wunsch active">Wunschliste</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <p class="hero-sub">17. Juli 2027</p>
+    <h1>Wunschliste</h1>
+    <div class="hero-divider"></div>
+    <p class="hero-tagline">Unsere Wünsche für den Start ins gemeinsame Leben</p>
+  </div>
+
+  <section class="intro">
+    <p>Das grösste Geschenk ist, dass ihr an unserem Tag dabei seid. Wer uns trotzdem eine Freude machen möchte, findet hier unsere Wunschliste.</p>
+    <p>Ihr könnt gerne auch zu einem grösseren Wunsch gemeinsam beitragen — jeder Betrag ist willkommen und von Herzen geschätzt.</p>
+  </section>
+
+  <section class="wunschliste-section">
+    <div class="wunschliste-placeholder">
+      <div class="icon">🎁</div>
+      <h3>Unsere Wunschliste</h3>
+      <p>Die Wunschliste wird in Kürze hier eingebettet.<br/>Sobald wir uns für ein Tool entschieden haben, erscheint sie direkt hier.</p>
+    </div>
+  </section>
+
+  <section class="zahlung-section">
+    <div class="zahlung-card">
+      <div class="icon">📱</div>
+      <h3>TWINT</h3>
+      <p>Ihr könnt uns direkt per TWINT etwas zukommen lassen.</p>
+      <p class="detail">
+        Nadia Hennessy<br/>
+        +41 XX XXX XX XX
+      </p>
+    </div>
+    <div class="zahlung-card">
+      <div class="icon">🏦</div>
+      <h3>Banküberweisung</h3>
+      <p>Für alle, die lieber klassisch überweisen möchten.</p>
+      <p class="detail">
+        IBAN: CH00 0000 0000 0000 0000 0<br/>
+        Nadia & Michael Hennessy
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    Nadia &amp; Michael · 17.07.2027
+    <div class="trauzeugen">
+      Bei Fragen wendet euch gerne an unsere Trauzeugen:<br/>
+      Julia: <a href="tel:+41794094398">+41 79 409 43 98</a>
+      &nbsp;·&nbsp;
+      Daniel: <a href="tel:+41786121311">+41 78 612 13 11</a>
+    </div>
+  </footer>
+
+  <script src="guest.js"></script>
+
+</body>
+</html>      font-size: 0.75rem;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: #5C6B4F;
