@@ -7,6 +7,7 @@
    BASE
    ============================================================ */
 body {
+  font-size: 16px;
   background-color: #f9f5f0;
   font-family: 'Montserrat', sans-serif;
   color: #5C6B4F;
@@ -57,7 +58,7 @@ nav {
    ============================================================ */
 .hero {
   text-align: center;
-  padding: 80px 20px 60px;
+  padding: 60px 20px 40px;
 }
 
 .hero-sub {
@@ -70,7 +71,7 @@ nav {
 
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-size: clamp(2.2rem, 6vw, 4rem);
   font-weight: 300;
   color: #C96A3A;
   letter-spacing: 0.1em;
@@ -212,10 +213,24 @@ footer .trauzeugen a {
 }
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE — shared
    ============================================================ */
 @media (max-width: 600px) {
-  nav { padding: 16px 20px; }
-  .nav-links a { margin-left: 16px; font-size: 0.65rem; }
-  .nav-logo { font-size: 1rem; }
+  nav {
+    padding: 14px 16px;
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+  }
+
+  .nav-links a {
+    margin-left: 14px;
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+  }
+
+  .hero {
+    padding: 48px 16px 32px;
+  }
 }
