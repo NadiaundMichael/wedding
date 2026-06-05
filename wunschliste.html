@@ -5,8 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Nadia & Michael – Wunschliste</title>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
   <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background-color: #f9f5f0;
+      font-family: 'Montserrat', sans-serif;
+      color: #5C6B4F;
+    }
+
+    nav {
+      background-color: #f9f5f0;
+      border-bottom: 1px solid #e8d5c0;
+      padding: 18px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      letter-spacing: 0.15em;
+      color: #C96A3A;
+    }
+
+    .nav-links a {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #5C6B4F;
+      text-decoration: none;
+      margin-left: 32px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active { color: #C96A3A; }
+
+    .nav-apero,
+    .nav-dinner,
+    .nav-wunsch { display: none; }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+    }
+
+    .hero-sub {
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #D4956A;
+      margin-bottom: 16px;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 300;
+      color: #C96A3A;
+      letter-spacing: 0.1em;
+      line-height: 1.2;
+    }
+
+    .hero-divider {
+      width: 60px;
+      height: 1px;
+      background: #C96A3A;
+      margin: 24px auto;
+    }
+
+    .hero-tagline {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #5C6B4F;
+    }
+
     .intro {
       max-width: 640px;
       margin: 0 auto;
@@ -62,6 +141,35 @@
       gap: 24px;
     }
 
+    .zahlung-card {
+      background: #fff8f3;
+      border: 1px solid #e8d5c0;
+      border-radius: 4px;
+      padding: 36px 28px;
+      text-align: center;
+    }
+
+    .zahlung-card .icon {
+      font-size: 1.8rem;
+      margin-bottom: 16px;
+    }
+
+    .zahlung-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: #D4956A;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .zahlung-card p {
+      font-size: 0.78rem;
+      line-height: 1.9;
+      color: #5C6B4F;
+      font-weight: 300;
+    }
+
     .zahlung-card .detail {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1rem;
@@ -70,7 +178,33 @@
       line-height: 1.7;
     }
 
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      border-top: 1px solid #e8d5c0;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #C96A3A;
+      line-height: 2.2;
+    }
+
+    footer .trauzeugen {
+      margin-top: 10px;
+      font-size: 0.62rem;
+      color: #5C6B4F;
+      letter-spacing: 0.15em;
+      text-transform: none;
+    }
+
+    footer .trauzeugen a {
+      color: #C96A3A;
+      text-decoration: none;
+    }
+
     @media (max-width: 600px) {
+      nav { padding: 16px 20px; }
+      .nav-links a { margin-left: 16px; font-size: 0.65rem; }
       .wunschliste-placeholder { padding: 60px 20px; }
       .zahlung-section { grid-template-columns: 1fr; }
     }
@@ -81,7 +215,7 @@
   <nav>
     <div class="nav-logo">N & M</div>
     <div class="nav-links">
-      <a href="ueberuns.html"    class="nav-ueber">Über uns</a>
+      <a href="ueberuns.html">Über uns</a>
       <a href="apero.html"       class="nav-apero">Apéro</a>
       <a href="dinner.html"      class="nav-dinner">Dinner</a>
       <a href="wunschliste.html" class="nav-wunsch active">Wunschliste</a>
@@ -139,7 +273,22 @@
     </div>
   </footer>
 
-  <script src="guest.js"></script>
+  <script>
+    (function () {
+      const guestType = localStorage.getItem('guestType');
+      const navApero  = document.querySelector('.nav-apero');
+      const navDinner = document.querySelector('.nav-dinner');
+      const navWunsch = document.querySelector('.nav-wunsch');
+
+      if (guestType === 'apero' || guestType === 'dinner') {
+        if (navApero)  navApero.style.display  = 'inline';
+        if (navWunsch) navWunsch.style.display = 'inline';
+      }
+      if (guestType === 'dinner') {
+        if (navDinner) navDinner.style.display = 'inline';
+      }
+    })();
+  </script>
 
 </body>
 </html>
