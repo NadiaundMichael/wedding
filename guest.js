@@ -26,7 +26,6 @@
   const navDinner = document.querySelector('.nav-dinner');
   const navWunsch = document.querySelector('.nav-wunsch');
 
-  // Start all hidden (CSS already does this, but be explicit)
   if (navApero)  navApero.style.display  = 'none';
   if (navDinner) navDinner.style.display = 'none';
   if (navWunsch) navWunsch.style.display = 'none';
@@ -35,10 +34,6 @@
     if (navApero)  navApero.style.display  = 'inline';
     if (navWunsch) navWunsch.style.display = 'inline';
   }
-  if (guestType === 'dinner') {
-    if (navDinner) navDinner.style.display = 'inline';
-  }
-})();  }
   if (guestType === 'dinner') {
     if (navDinner) navDinner.style.display = 'inline';
   }
