@@ -28,7 +28,7 @@
 
     .nav-logo {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
+      font-size: 1.3rem;
       letter-spacing: 0.15em;
       color: #C96A3A;
     }
@@ -86,10 +86,57 @@
       color: #5C6B4F;
     }
 
+    .rsvp-section {
+      background: #f0e8df;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .rsvp-section .label {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #D4956A;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .rsvp-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #C96A3A;
+      margin-bottom: 16px;
+    }
+
+    .rsvp-section p {
+      font-size: 0.8rem;
+      color: #5C6B4F;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .rsvp-btn {
+      display: inline-block;
+      padding: 14px 36px;
+      border: 1px solid #C96A3A;
+      color: #C96A3A;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .rsvp-btn:hover {
+      background: #C96A3A;
+      color: #fff;
+    }
+
     .timeline-section {
       max-width: 800px;
       margin: 0 auto;
-      padding: 40px 20px 80px;
+      padding: 60px 20px 80px;
     }
 
     .timeline-section h2 {
@@ -244,6 +291,7 @@
 
     @media (max-width: 600px) {
       nav { padding: 16px 20px; }
+      .nav-logo { font-size: 1rem; }
       .nav-links a { margin-left: 16px; font-size: 0.65rem; }
       .galerie-grid { grid-template-columns: repeat(2, 1fr); }
     }
@@ -265,8 +313,15 @@
     <p class="hero-sub">17. Juli 2027</p>
     <h1>Nadia<br>&amp;<br>Michael</h1>
     <div class="hero-divider"></div>
-    <p class="hero-tagline">Unsere Geschichte</p>
+    <p class="hero-tagline">Unsere Hochzeit</p>
   </div>
+
+  <section class="rsvp-section">
+    <span class="label">Anmeldung</span>
+    <h2>Bitte gebt uns Bescheid</h2>
+    <p>Wir bitten euch, bis zum <strong>31. März 2027</strong> zu antworten,<br/>damit wir alles perfekt planen können.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScpeH6tp2maiEYcViqHFCe-tiYBKmNYS4B47XQoLdVbw0OXLA/viewform" target="_blank" class="rsvp-btn">Jetzt anmelden</a>
+  </section>
 
   <section class="timeline-section">
     <h2>Wie alles begann</h2>
@@ -323,18 +378,18 @@
   <section class="galerie-section">
     <h2>Unsere Momente</h2>
     <div class="galerie-grid">
-      <div class="galerie-placeholder"><img src="USA1.JPG"     loading="lazy" alt="Nadia und Michael in den USA"></div>
-      <div class="galerie-placeholder"><img src="USA4.JPG"     loading="lazy" alt="Nadia und Michael in den USA"></div>
-      <div class="galerie-placeholder"><img src="MX1.JPG"      loading="lazy" alt="Nadia und Michael in Mexiko"></div>
-      <div class="galerie-placeholder"><img src="MX2.JPG"      loading="lazy" alt="Nadia und Michael in Mexiko"></div>
-      <div class="galerie-placeholder"><img src="NAMIBIA1.JPG" loading="lazy" alt="Nadia und Michael in Namibia"></div>
+      <div class="galerie-placeholder"><img src="USA1.JPG"      loading="lazy" alt="Nadia und Michael in den USA"></div>
+      <div class="galerie-placeholder"><img src="USA4.JPG"      loading="lazy" alt="Nadia und Michael in den USA"></div>
+      <div class="galerie-placeholder"><img src="MX1.JPG"       loading="lazy" alt="Nadia und Michael in Mexiko"></div>
+      <div class="galerie-placeholder"><img src="MX2.JPG"       loading="lazy" alt="Nadia und Michael in Mexiko"></div>
+      <div class="galerie-placeholder"><img src="NAMIBIA1.JPG"  loading="lazy" alt="Nadia und Michael in Namibia"></div>
       <div class="galerie-placeholder"><img src="NAMIBIA2.HEIC" loading="lazy" alt="Nadia und Michael in Namibia"></div>
       <div class="galerie-placeholder"><img src="Marokko1.HEIC" loading="lazy" alt="Nadia und Michael in Marokko"></div>
       <div class="galerie-placeholder"><img src="Marokko2.HEIC" loading="lazy" alt="Nadia und Michael in Marokko"></div>
-      <div class="galerie-placeholder"><img src="HK1.heic"     loading="lazy" alt="Nadia und Michael in Hongkong"></div>
-      <div class="galerie-placeholder"><img src="HK2.JPG"      loading="lazy" alt="Nadia und Michael in Hongkong"></div>
-      <div class="galerie-placeholder"><img src="NZ1.HEIC"     loading="lazy" alt="Nadia und Michael in Neuseeland"></div>
-      <div class="galerie-placeholder"><img src="NZ2.HEIC"     loading="lazy" alt="Nadia und Michael in Neuseeland"></div>
+      <div class="galerie-placeholder"><img src="HK1.heic"      loading="lazy" alt="Nadia und Michael in Hongkong"></div>
+      <div class="galerie-placeholder"><img src="HK2.JPG"       loading="lazy" alt="Nadia und Michael in Hongkong"></div>
+      <div class="galerie-placeholder"><img src="NZ1.HEIC"      loading="lazy" alt="Nadia und Michael in Neuseeland"></div>
+      <div class="galerie-placeholder"><img src="NZ2.HEIC"      loading="lazy" alt="Nadia und Michael in Neuseeland"></div>
     </div>
   </section>
 
