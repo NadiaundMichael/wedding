@@ -46,8 +46,7 @@
     .nav-links a:hover,
     .nav-links a.active { color: #C96A3A; }
 
-    .nav-apero,
-    .nav-dinner,
+    .nav-infos,
     .nav-wunsch { display: none; }
 
     .hero {
@@ -216,8 +215,7 @@
     <div class="nav-logo">N & M</div>
     <div class="nav-links">
       <a href="ueberuns.html">Über uns</a>
-      <a href="apero.html"       class="nav-apero">Apéro</a>
-      <a href="dinner.html"      class="nav-dinner">Dinner</a>
+      <a href="infos.html" class="nav-infos">Infos</a>
       <a href="wunschliste.html" class="nav-wunsch active">Wunschliste</a>
     </div>
   </nav>
@@ -276,16 +274,12 @@
   <script>
     (function () {
       const guestType = localStorage.getItem('guestType');
-      const navApero  = document.querySelector('.nav-apero');
-      const navDinner = document.querySelector('.nav-dinner');
+      const navInfos  = document.querySelector('.nav-infos');
       const navWunsch = document.querySelector('.nav-wunsch');
 
       if (guestType === 'apero' || guestType === 'dinner') {
-        if (navApero)  navApero.style.display  = 'inline';
+        if (navInfos)  navInfos.style.display  = 'inline';
         if (navWunsch) navWunsch.style.display = 'inline';
-      }
-      if (guestType === 'dinner') {
-        if (navDinner) navDinner.style.display = 'inline';
       }
     })();
   </script>
