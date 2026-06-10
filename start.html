@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nadia & Michael</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #f9f5f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      font-family: 'Georgia', serif;
+      color: #C96A3A;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+    }
+  </style>
+</head>
+<body>
+  <p>Einen Moment …</p>
+  <script>
+    (function () {
+      const params = new URLSearchParams(window.location.search);
+      const type   = params.get('type');
+
+      if (type === 'dinner' || type === 'apero') {
+        localStorage.setItem('guestType', type);
+      }
+
+      window.location.replace('ueberuns.html');
+    })();
+  </script>
+</body>
+</html>
