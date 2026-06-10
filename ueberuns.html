@@ -46,8 +46,7 @@
     .nav-links a:hover,
     .nav-links a.active { color: #C96A3A; }
 
-    .nav-apero,
-    .nav-dinner,
+    .nav-infos,
     .nav-wunsch { display: none; }
 
     .hero {
@@ -303,8 +302,7 @@
     <div class="nav-logo">N & M</div>
     <div class="nav-links">
       <a href="ueberuns.html" class="active">Über uns</a>
-      <a href="apero.html"       class="nav-apero">Apéro</a>
-      <a href="dinner.html"      class="nav-dinner">Dinner</a>
+      <a href="infos.html" class="nav-infos">Infos</a>
       <a href="wunschliste.html" class="nav-wunsch">Wunschliste</a>
     </div>
   </nav>
@@ -320,7 +318,7 @@
     <span class="label">Anmeldung</span>
     <h2>Bitte gebt uns Bescheid</h2>
     <p>Wir bitten euch, bis zum <strong>31. März 2027</strong> zu antworten,<br/>damit wir alles perfekt planen können.</p>
-    <a href="https://docs.google.com/forms/d/e/1FAIpQLScpeH6tp2maiEYcViqHFCe-tiYBKmNYS4B47XQoLdVbw0OXLA/viewform" target="_blank" class="rsvp-btn">Jetzt anmelden</a>
+    <a href="#" id="rsvp-btn" target="_blank" class="rsvp-btn">Jetzt anmelden</a>
   </section>
 
   <section class="timeline-section">
@@ -406,16 +404,19 @@
   <script>
     (function () {
       const guestType = localStorage.getItem('guestType');
-      const navApero  = document.querySelector('.nav-apero');
-      const navDinner = document.querySelector('.nav-dinner');
+      const navInfos  = document.querySelector('.nav-infos');
       const navWunsch = document.querySelector('.nav-wunsch');
+      const rsvpBtn   = document.getElementById('rsvp-btn');
 
       if (guestType === 'apero' || guestType === 'dinner') {
-        if (navApero)  navApero.style.display  = 'inline';
+        if (navInfos)  navInfos.style.display  = 'inline';
         if (navWunsch) navWunsch.style.display = 'inline';
       }
+
       if (guestType === 'dinner') {
-        if (navDinner) navDinner.style.display = 'inline';
+        rsvpBtn.href = 'https://docs.google.com/forms/d/e/1FAIpQLScpeH6tp2maiEYcViqHFCe-tiYBKmNYS4B47XQoLdVbw0OXLA/viewform?usp=pp_url&entry.1163204306=Ap%C3%A9ro+%26+Dinner';
+      } else {
+        rsvpBtn.href = 'https://docs.google.com/forms/d/e/1FAIpQLScpeH6tp2maiEYcViqHFCe-tiYBKmNYS4B47XQoLdVbw0OXLA/viewform?usp=pp_url&entry.1163204306=Ap%C3%A9ro';
       }
     })();
   </script>
