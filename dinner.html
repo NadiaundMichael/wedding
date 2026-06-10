@@ -28,7 +28,7 @@
 
     .nav-logo {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
+      font-size: 1.3rem;
       letter-spacing: 0.15em;
       color: #C96A3A;
     }
@@ -86,10 +86,57 @@
       color: #5C6B4F;
     }
 
+    .rsvp-section {
+      background: #f0e8df;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .rsvp-section .label {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #D4956A;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .rsvp-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #C96A3A;
+      margin-bottom: 16px;
+    }
+
+    .rsvp-section p {
+      font-size: 0.8rem;
+      color: #5C6B4F;
+      line-height: 1.8;
+      margin-bottom: 24px;
+    }
+
+    .rsvp-btn {
+      display: inline-block;
+      padding: 14px 36px;
+      border: 1px solid #C96A3A;
+      color: #C96A3A;
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .rsvp-btn:hover {
+      background: #C96A3A;
+      color: #fff;
+    }
+
     .info-section {
       max-width: 860px;
       margin: 0 auto;
-      padding: 20px 20px 80px;
+      padding: 60px 20px 80px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 24px;
@@ -216,53 +263,6 @@
 
     .color-swatch:hover { transform: scale(1.2); }
 
-    .rsvp-section {
-      background: #f0e8df;
-      text-align: center;
-      padding: 60px 20px;
-    }
-
-    .rsvp-section .label {
-      font-size: 0.65rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: #D4956A;
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .rsvp-section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem;
-      font-weight: 300;
-      color: #C96A3A;
-      margin-bottom: 16px;
-    }
-
-    .rsvp-section p {
-      font-size: 0.8rem;
-      color: #5C6B4F;
-      line-height: 1.8;
-      margin-bottom: 24px;
-    }
-
-    .rsvp-btn {
-      display: inline-block;
-      padding: 14px 36px;
-      border: 1px solid #C96A3A;
-      color: #C96A3A;
-      font-size: 0.7rem;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      text-decoration: none;
-      transition: all 0.3s;
-    }
-
-    .rsvp-btn:hover {
-      background: #C96A3A;
-      color: #fff;
-    }
-
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -289,6 +289,7 @@
 
     @media (max-width: 600px) {
       nav { padding: 16px 20px; }
+      .nav-logo { font-size: 1rem; }
       .nav-links a { margin-left: 16px; font-size: 0.65rem; }
       .info-section   { grid-template-columns: 1fr; }
       .dresscode-grid { grid-template-columns: 1fr; }
@@ -313,6 +314,13 @@
     <div class="hero-divider"></div>
     <p class="hero-tagline">Abendfeier · Aachhuus · Salmsach</p>
   </div>
+
+  <section class="rsvp-section">
+    <span class="label">Anmeldung</span>
+    <h2>Bitte gebt uns Bescheid</h2>
+    <p>Wir bitten euch, bis zum <strong>31. März 2027</strong> zu antworten,<br/>damit wir alles perfekt planen können.</p>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLScpeH6tp2maiEYcViqHFCe-tiYBKmNYS4B47XQoLdVbw0OXLA/viewform" target="_blank" class="rsvp-btn">Jetzt anmelden</a>
+  </section>
 
   <section class="info-section">
     <div class="info-card">
@@ -377,13 +385,6 @@
     </div>
   </section>
 
-  <section class="rsvp-section">
-    <span class="label">Anmeldung</span>
-    <h2>Bitte gebt uns Bescheid</h2>
-    <p>Wir bitten euch, bis zum <strong>31. März 2027</strong> zu antworten,<br/>damit wir alles perfekt planen können.</p>
-    <a href="https://nadiaundmichael.ch" class="rsvp-btn">Jetzt anmelden</a>
-  </section>
-
   <footer>
     Nadia &amp; Michael · 17.07.2027
     <div class="trauzeugen">
@@ -396,7 +397,6 @@
 
   <script>
     (function () {
-      // Always mark as dinner guest when this page is visited
       localStorage.setItem('guestType', 'dinner');
 
       const navApero  = document.querySelector('.nav-apero');
