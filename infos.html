@@ -28,7 +28,7 @@
 
     .nav-logo {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
+      font-size: 1.3rem;
       letter-spacing: 0.15em;
       color: #C96A3A;
     }
@@ -52,7 +52,7 @@
     /* ── Hero ── */
     .hero {
       text-align: center;
-      padding: 80px 20px 60px;
+      padding: 80px 20px 50px;
     }
 
     .hero-sub {
@@ -76,38 +76,25 @@
       width: 60px;
       height: 1px;
       background: #C96A3A;
-      margin: 24px auto;
+      margin: 24px auto 0;
     }
 
-    .hero-tagline {
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #5C6B4F;
-    }
-
-    /* ── Blöcke ── */
-    .block {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 60px 20px 0;
-    }
-
-    .block-header {
+    /* ── Sektions-Titel ── */
+    .section-title {
       text-align: center;
-      margin-bottom: 40px;
+      padding: 60px 20px 40px;
     }
 
-    .block-header .label {
+    .section-title .label {
       font-size: 0.65rem;
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: #D4956A;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       display: block;
     }
 
-    .block-header h2 {
+    .section-title h2 {
       font-family: 'Cormorant Garamond', serif;
       font-size: 2rem;
       font-weight: 300;
@@ -115,25 +102,70 @@
       letter-spacing: 0.15em;
     }
 
-    .block-divider {
+    .section-divider {
       width: 40px;
       height: 1px;
       background: #e8d5c0;
       margin: 16px auto 0;
     }
 
-    .info-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-      padding-bottom: 60px;
+    /* ── Countdown ── */
+    .countdown-wrap {
+      padding: 0 20px 60px;
+    }
+
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .countdown-box {
+      background: #fff8f3;
+      border: 1px solid #e8d5c0;
+      border-radius: 12px;
+      padding: 28px 32px;
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .countdown-box .number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 300;
+      color: #C96A3A;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .countdown-box .unit {
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #D4956A;
+    }
+
+    /* ── Trennlinie zwischen Blöcken ── */
+    .block-separator {
+      max-width: 860px;
+      margin: 0 auto;
+      border: none;
+      border-top: 1px solid #e8d5c0;
+    }
+
+    /* ── Info-Kästchen ── */
+    .info-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 0 20px 60px;
     }
 
     .info-card {
       background: #fff8f3;
       border: 1px solid #e8d5c0;
       border-radius: 12px;
-      padding: 36px 28px;
+      padding: 36px 40px;
       text-align: center;
     }
 
@@ -148,34 +180,48 @@
       font-weight: 400;
       color: #D4956A;
       letter-spacing: 0.1em;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
     }
 
-    .info-card p {
-      font-size: 0.8rem;
-      line-height: 1.9;
-      color: #5C6B4F;
-      font-weight: 300;
+    .info-card .detail-row {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
     }
 
-    .info-card .highlight {
-      font-size: 1.1rem;
-      font-family: 'Cormorant Garamond', serif;
-      color: #C96A3A;
+    .info-card .detail-item {
+      text-align: center;
+    }
+
+    .info-card .detail-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #D4956A;
       margin-bottom: 6px;
+      display: block;
     }
 
-    /* ── Trennlinie zwischen Blöcken ── */
-    .block-separator {
-      max-width: 860px;
-      margin: 0 auto;
-      border: none;
-      border-top: 1px solid #e8d5c0;
+    .info-card .detail-value {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      color: #C96A3A;
+      line-height: 1.4;
+    }
+
+    .info-card .detail-value a {
+      color: #C96A3A;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-decoration: none;
+      display: block;
+      margin-top: 4px;
     }
 
     /* ── Dresscode ── */
-    .dresscode-section {
-      max-width: 860px;
+    .dresscode-wrap {
+      max-width: 600px;
       margin: 0 auto;
       padding: 0 20px 60px;
     }
@@ -216,7 +262,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 20px;
-      max-width: 500px;
+      max-width: 440px;
       margin: 0 auto;
     }
 
@@ -259,64 +305,9 @@
 
     .color-swatch:hover { transform: scale(1.2); }
 
-    /* ── Countdown ── */
-    .countdown-section {
-      text-align: center;
-      padding: 60px 20px;
-      background: #f0e8df;
-    }
-
-    .countdown-section .label {
-      font-size: 0.65rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: #D4956A;
-      margin-bottom: 12px;
-      display: block;
-    }
-
-    .countdown-section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem;
-      font-weight: 300;
-      color: #C96A3A;
-      margin-bottom: 40px;
-    }
-
-    .countdown-grid {
-      display: flex;
-      justify-content: center;
-      gap: 16px;
-      flex-wrap: wrap;
-    }
-
-    .countdown-box {
-      background: #fff8f3;
-      border: 1px solid #e8d5c0;
-      border-radius: 12px;
-      padding: 28px 24px;
-      min-width: 110px;
-      text-align: center;
-    }
-
-    .countdown-box .number {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(2rem, 5vw, 3rem);
-      font-weight: 300;
-      color: #C96A3A;
-      line-height: 1;
-      margin-bottom: 10px;
-    }
-
-    .countdown-box .unit {
-      font-size: 0.6rem;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: #D4956A;
-    }
-
     /* ── RSVP ── */
     .rsvp-section {
+      background: #f0e8df;
       text-align: center;
       padding: 60px 20px 80px;
     }
@@ -392,9 +383,9 @@
       nav { padding: 16px 20px; }
       .nav-logo { font-size: 1rem; }
       .nav-links a { margin-left: 16px; font-size: 0.65rem; }
-      .info-section   { grid-template-columns: 1fr; }
+      .countdown-box { min-width: 90px; padding: 20px 16px; }
       .dresscode-grid { grid-template-columns: 1fr; }
-      .countdown-box  { min-width: 80px; padding: 20px 16px; }
+      .info-card .detail-row { gap: 24px; }
     }
   </style>
 </head>
@@ -414,86 +405,84 @@
     <p class="hero-sub">17. Juli 2027</p>
     <h1>Infos</h1>
     <div class="hero-divider"></div>
-    <p class="hero-tagline" id="hero-tagline">Alle Infos zu eurem Tag</p>
   </div>
 
-  <!-- 2. Apéro Block -->
-  <div class="block" id="block-apero">
-    <div class="block-header">
-      <span class="label">Standesamt & Apéro</span>
-      <h2>🥂 Apéro</h2>
-      <p style="font-size:0.75rem; color:#5C6B4F; margin-top:10px; letter-spacing:0.1em;">Frauenfeld · 14:00 Uhr</p>
-      <div class="block-divider"></div>
-    </div>
-    <div class="info-section">
-      <div class="info-card">
-        <div class="icon">🕑</div>
-        <h3>Uhrzeit</h3>
-        <p class="highlight">14:00 Uhr</p>
-        <p>Bitte seid rechtzeitig vor Ort, damit wir gemeinsam und pünktlich starten können.</p>
+  <!-- 2. Countdown -->
+  <div class="section-title">
+    <span class="label">Wir freuen uns auf euch</span>
+    <h2>Bis es so weit ist</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="countdown-wrap">
+    <div class="countdown-grid">
+      <div class="countdown-box">
+        <div class="number" id="cd-days">–</div>
+        <div class="unit">Tage</div>
       </div>
-      <div class="info-card">
-        <div class="icon">📍</div>
-        <h3>Ort</h3>
-        <p class="highlight">Frauenfeld</p>
-        <p>Der genaue Ort wird noch bekannt gegeben.<br/>Details folgen in Kürze.</p>
+      <div class="countdown-box">
+        <div class="number" id="cd-hours">–</div>
+        <div class="unit">Stunden</div>
       </div>
-      <div class="info-card">
-        <div class="icon">💍</div>
-        <h3>Standesamt</h3>
-        <p>Hier geben wir uns das Ja-Wort – feiert diesen besonderen Moment mit uns!</p>
-      </div>
-      <div class="info-card">
-        <div class="icon">🥂</div>
-        <h3>Apéro</h3>
-        <p>Im Anschluss an die Trauung feiern wir gemeinsam mit einem feinen Apéro.</p>
+      <div class="countdown-box">
+        <div class="number" id="cd-minutes">–</div>
+        <div class="unit">Minuten</div>
       </div>
     </div>
   </div>
 
-  <!-- 3. Dinner Block (nur für Dinner-Gäste) -->
+  <!-- 3. Apéro -->
+  <hr class="block-separator"/>
+  <div class="section-title">
+    <span class="label">Standesamt & Apéro</span>
+    <h2>🥂 Apéro</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <div class="info-wrap">
+    <div class="info-card">
+      <div class="detail-row">
+        <div class="detail-item">
+          <span class="detail-label">Uhrzeit</span>
+          <span class="detail-value">14:00 Uhr</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Ort</span>
+          <span class="detail-value">Frauenfeld<br/>
+            <span style="font-family:'Montserrat',sans-serif; font-size:0.72rem; color:#5C6B4F; font-style:italic;">Details folgen</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Dinner (nur für Dinner-Gäste) -->
   <div id="block-dinner" style="display:none;">
     <hr class="block-separator"/>
-    <div class="block">
-      <div class="block-header">
-        <span class="label">Abendfeier · Aachhuus · Salmsach</span>
-        <h2>🍽️ Dinner</h2>
-        <p style="font-size:0.75rem; color:#5C6B4F; margin-top:10px; letter-spacing:0.1em;">Salmsach · 18:00 Uhr</p>
-        <div class="block-divider"></div>
-      </div>
-      <div class="info-section">
-        <div class="info-card">
-          <div class="icon">🕕</div>
-          <h3>Uhrzeit</h3>
-          <p class="highlight">18:00 Uhr</p>
-          <p>Der Abend beginnt um 18 Uhr – wir freuen uns, ihn gemeinsam mit euch zu feiern.</p>
-        </div>
-        <div class="info-card">
-          <div class="icon">📍</div>
-          <h3>Ort</h3>
-          <p class="highlight">Aachhuus</p>
-          <p>Salmsach<br/>
-            <a href="https://maps.app.goo.gl/cbR9bCeGtSdXFEQW9"
-               target="_blank"
-               style="color:#C96A3A; font-size:0.75rem; letter-spacing:0.1em; text-decoration:none;">
-              ↗ Google Maps
-            </a>
-          </p>
-        </div>
-        <div class="info-card">
-          <div class="icon">🍽️</div>
-          <h3>Dinner</h3>
-          <p>Ein festliches Abendessen erwartet euch – lasst euch verwöhnen und geniesst den Abend mit uns.</p>
-        </div>
-        <div class="info-card">
-          <div class="icon">🎉</div>
-          <h3>Feier</h3>
-          <p>Nach dem Dinner wird getanzt, gelacht und gefeiert – bis in die Nacht hinein!</p>
+    <div class="section-title">
+      <span class="label">Abendfeier · Aachhuus · Salmsach</span>
+      <h2>🍽️ Dinner</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="info-wrap">
+      <div class="info-card">
+        <div class="detail-row">
+          <div class="detail-item">
+            <span class="detail-label">Uhrzeit</span>
+            <span class="detail-value">18:00 Uhr</span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Ort</span>
+            <span class="detail-value">Aachhuus
+              <a href="https://maps.app.goo.gl/cbR9bCeGtSdXFEQW9" target="_blank">↗ Google Maps</a>
+            </span>
+          </div>
         </div>
       </div>
     </div>
 
-    <section class="dresscode-section">
+    <div class="dresscode-wrap">
       <div class="dresscode-box">
         <span class="label">Outfit des Abends</span>
         <h3>Dresscode</h3>
@@ -523,32 +512,8 @@
           </div>
         </div>
       </div>
-    </section>
-  </div>
-
-  <!-- 4. Countdown -->
-  <section class="countdown-section">
-    <span class="label">Wir freuen uns auf euch</span>
-    <h2>Bis es soweit ist</h2>
-    <div class="countdown-grid">
-      <div class="countdown-box">
-        <div class="number" id="cd-days">–</div>
-        <div class="unit">Tage</div>
-      </div>
-      <div class="countdown-box">
-        <div class="number" id="cd-hours">–</div>
-        <div class="unit">Stunden</div>
-      </div>
-      <div class="countdown-box">
-        <div class="number" id="cd-minutes">–</div>
-        <div class="unit">Minuten</div>
-      </div>
-      <div class="countdown-box">
-        <div class="number" id="cd-seconds">–</div>
-        <div class="unit">Sekunden</div>
-      </div>
     </div>
-  </section>
+  </div>
 
   <!-- 5. RSVP -->
   <section class="rsvp-section">
@@ -574,7 +539,6 @@
       const navInfos    = document.querySelector('.nav-infos');
       const navWunsch   = document.querySelector('.nav-wunsch');
       const rsvpBtn     = document.getElementById('rsvp-btn');
-      const tagline     = document.getElementById('hero-tagline');
       const blockDinner = document.getElementById('block-dinner');
 
       if (guestType === 'apero' || guestType === 'dinner') {
@@ -584,31 +548,28 @@
 
       if (guestType === 'dinner') {
         rsvpBtn.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdZY2ESQ9NjPX6xQlURDryIO7YJCTo2rn56IUa__bzfEPUSGg/viewform?usp=dialog';
-        tagline.textContent = 'Standesamt & Apéro · Frauenfeld — Dinner · Aachhuus · Salmsach';
         blockDinner.style.display = 'block';
       } else {
         rsvpBtn.href = 'https://docs.google.com/forms/d/e/1FAIpQLScpeH6tp2maiEYcViqHFCe-tiYBKmNYS4B47XQoLdVbw0OXLA/viewform?usp=dialog';
-        tagline.textContent = 'Standesamt & Apéro · Frauenfeld';
       }
 
-      // ── Countdown ──
+      // ── Countdown (Tage, Stunden, Minuten) ──
       const target = new Date('2027-07-17T14:00:00');
 
       function updateCountdown() {
         const diff = target - new Date();
         if (diff <= 0) {
-          ['cd-days','cd-hours','cd-minutes','cd-seconds']
+          ['cd-days','cd-hours','cd-minutes']
             .forEach(id => document.getElementById(id).textContent = '0');
           return;
         }
         document.getElementById('cd-days').textContent    = Math.floor(diff / 86400000);
         document.getElementById('cd-hours').textContent   = Math.floor((diff % 86400000) / 3600000);
         document.getElementById('cd-minutes').textContent = Math.floor((diff % 3600000) / 60000);
-        document.getElementById('cd-seconds').textContent = Math.floor((diff % 60000) / 1000);
       }
 
       updateCountdown();
-      setInterval(updateCountdown, 1000);
+      setInterval(updateCountdown, 60000);
     })();
   </script>
 
