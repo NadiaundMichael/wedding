@@ -51,7 +51,7 @@
 
     .hero {
       text-align: center;
-      padding: 80px 20px 60px;
+      padding: 80px 20px 40px;
     }
 
     .hero-sub {
@@ -83,6 +83,31 @@
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: #5C6B4F;
+    }
+
+    /* ── Herz-Trennlinie ── */
+    .heart-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      padding: 32px 20px 48px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .heart-divider::before,
+    .heart-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #e8d5c0;
+    }
+
+    .heart-divider span {
+      color: #C96A3A;
+      font-size: 1.1rem;
+      line-height: 1;
     }
 
     .rsvp-section {
@@ -207,7 +232,7 @@
     .reisen-box {
       background: #fff8f3;
       border: 1px solid #e8d5c0;
-      border-radius: 4px;
+      border-radius: 12px;
       padding: 20px 24px;
       margin-top: 12px;
     }
@@ -253,7 +278,7 @@
     .galerie-placeholder {
       aspect-ratio: 1;
       background: #f0e8df;
-      border-radius: 4px;
+      border-radius: 12px;
       overflow: hidden;
     }
 
@@ -312,6 +337,11 @@
     <h1>Nadia<br>&amp;<br>Michael</h1>
     <div class="hero-divider"></div>
     <p class="hero-tagline">Unsere Hochzeit</p>
+  </div>
+
+  <!-- ── Herz-Trennlinie ── -->
+  <div class="heart-divider">
+    <span>♥</span>
   </div>
 
   <section class="rsvp-section">
@@ -414,9 +444,9 @@
       }
 
       if (guestType === 'dinner') {
-        rsvpBtn.href = 'https://docs.google.com/forms/d/e/1FAIpQLScpeH6tp2maiEYcViqHFCe-tiYBKmNYS4B47XQoLdVbw0OXLA/viewform?usp=pp_url&entry.1163204306=Ap%C3%A9ro+%26+Dinner';
+        rsvpBtn.href = 'https://docs.google.com/forms/d/e/1FAIpQLSdZY2ESQ9NjPX6xQlURDryIO7YJCTo2rn56IUa__bzfEPUSGg/viewform?usp=dialog';
       } else {
-        rsvpBtn.href = 'https://docs.google.com/forms/d/e/1FAIpQLScpeH6tp2maiEYcViqHFCe-tiYBKmNYS4B47XQoLdVbw0OXLA/viewform?usp=pp_url&entry.1163204306=Ap%C3%A9ro';
+        rsvpBtn.href = 'https://docs.google.com/forms/d/e/1FAIpQLScpeH6tp2maiEYcViqHFCe-tiYBKmNYS4B47XQoLdVbw0OXLA/viewform?usp=dialog';
       }
     })();
   </script>
