@@ -49,6 +49,7 @@
     .nav-infos,
     .nav-wunsch { display: none; }
 
+    /* ── Hero ── */
     .hero {
       text-align: center;
       padding: 80px 20px 40px;
@@ -71,29 +72,14 @@
       line-height: 1.2;
     }
 
-    .hero-divider {
-      width: 60px;
-      height: 1px;
-      background: #C96A3A;
-      margin: 24px auto;
-    }
-
-    .hero-tagline {
-      font-size: 0.75rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #5C6B4F;
-    }
-
     /* ── Herz-Trennlinie ── */
     .heart-divider {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 16px;
-      padding: 32px 20px 48px;
-      max-width: 500px;
-      margin: 0 auto;
+      max-width: 320px;
+      margin: 28px auto 20px;
     }
 
     .heart-divider::before,
@@ -110,6 +96,16 @@
       line-height: 1;
     }
 
+    .hero-tagline {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #5C6B4F;
+      text-align: center;
+      padding-bottom: 40px;
+    }
+
+    /* ── RSVP ── */
     .rsvp-section {
       background: #f0e8df;
       text-align: center;
@@ -144,6 +140,7 @@
       display: inline-block;
       padding: 14px 36px;
       border: 1px solid #C96A3A;
+      border-radius: 12px;
       color: #C96A3A;
       font-size: 0.7rem;
       letter-spacing: 0.25em;
@@ -157,6 +154,7 @@
       color: #fff;
     }
 
+    /* ── Timeline ── */
     .timeline-section {
       max-width: 800px;
       margin: 0 auto;
@@ -229,6 +227,7 @@
       font-weight: 300;
     }
 
+    /* ── Reisen-Box ── */
     .reisen-box {
       background: #fff8f3;
       border: 1px solid #e8d5c0;
@@ -242,17 +241,33 @@
       letter-spacing: 0.25em;
       text-transform: uppercase;
       color: #D4956A;
-      margin-bottom: 8px;
+      margin-bottom: 12px;
       display: block;
     }
 
-    .reisen-box p {
+    .reisen-list {
+      list-style: none;
       font-size: 0.78rem;
-      line-height: 1.9;
       color: #5C6B4F;
       font-weight: 300;
     }
 
+    .reisen-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid #f0e4d8;
+    }
+
+    .reisen-list li:last-child {
+      border-bottom: none;
+    }
+
+    .reisen-countries {
+      font-size: 0.72rem;
+      color: #D4956A;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── Galerie ── */
     .galerie-section {
       max-width: 1000px;
       margin: 0 auto;
@@ -289,6 +304,7 @@
       display: block;
     }
 
+    /* ── Footer ── */
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -335,18 +351,13 @@
   <div class="hero">
     <p class="hero-sub">17. Juli 2027</p>
     <h1>Nadia<br>&amp;<br>Michael</h1>
-    <div class="hero-divider"></div>
+    <div class="heart-divider"><span>♥</span></div>
     <p class="hero-tagline">Unsere Hochzeit</p>
-  </div>
-
-  <!-- ── Herz-Trennlinie ── -->
-  <div class="heart-divider">
-    <span>♥</span>
   </div>
 
   <section class="rsvp-section">
     <span class="label">Anmeldung</span>
-    <h2>Bitte gebt uns Bescheid</h2>
+    <h2>Seid ihr dabei?</h2>
     <p>Wir bitten euch, bis zum <strong>31. März 2027</strong> zu antworten,<br/>damit wir alles perfekt planen können.</p>
     <a href="#" id="rsvp-btn" target="_blank" class="rsvp-btn">Jetzt anmelden</a>
   </section>
@@ -379,12 +390,13 @@
         <p class="timeline-text">Gemeinsam haben wir so viel erlebt und gesehen – jede Reise hat uns noch ein bisschen näher zusammengebracht.</p>
         <div class="reisen-box">
           <span class="reisen-label">Unsere gemeinsamen Reisen</span>
-          <p>
-            🇦🇹 Wellness in Österreich &nbsp;·&nbsp; 🇩🇪 Weihnachtsmärkte in Deutschland<br/>
-            🇪🇸 Remote Work in Spanien &nbsp;·&nbsp; 🇮🇹 Italien &nbsp;·&nbsp; 🇫🇷 Frankreich<br/>
-            🇴🇲 Abenteuer in Oman &nbsp;·&nbsp; 🇲🇦 Marokko &nbsp;·&nbsp; 🇺🇸 USA<br/>
-            🇪🇨 Ecuador &nbsp;·&nbsp; 🇳🇦 Namibia &nbsp;·&nbsp; 🇿🇦 Südafrika &nbsp;·&nbsp; 🇳🇿 Neuseeland
-          </p>
+          <ul class="reisen-list">
+            <li>🇪🇺 Europa <span class="reisen-countries">(AT · DE · ES · IT · FR · SI · GR)</span></li>
+            <li>🇴🇲 Oman &nbsp;·&nbsp; 🇲🇦 Marokko</li>
+            <li>🇺🇸 USA &nbsp;·&nbsp; 🇲🇽 Mexiko &nbsp;·&nbsp; 🇪🇨 Ecuador</li>
+            <li>🇳🇦 Namibia &nbsp;·&nbsp; 🇿🇦 Südafrika</li>
+            <li>🇳🇿 Neuseeland</li>
+          </ul>
         </div>
       </div>
 
