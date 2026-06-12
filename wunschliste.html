@@ -86,7 +86,7 @@
       color: #5C6B4F;
     }
 
-    /* ── Intro-Text ── */
+    /* ── Intro-Karte ── */
     .intro {
       max-width: 640px;
       margin: 0 auto;
@@ -126,36 +126,35 @@
       margin-top: 14px;
     }
 
-    .intro-card .wishes {
+    /* ── Wunsch-Items ── */
+    .wishes {
       display: flex;
       justify-content: center;
-      gap: 24px;
-      margin: 28px 0 24px;
+      gap: 32px;
+      margin: 24px 0;
       flex-wrap: wrap;
     }
 
-    .wish-pill {
-      background: #f0e8df;
-      border: 1px solid #e8d5c0;
-      border-radius: 40px;
-      padding: 12px 24px;
+    .wish-item {
       text-align: center;
+      color: #5C6B4F;
     }
 
-    .wish-pill .wish-icon {
-      font-size: 1.4rem;
+    .wish-item .wish-icon {
+      font-size: 1.6rem;
       display: block;
-      margin-bottom: 6px;
+      margin-bottom: 8px;
     }
 
-    .wish-pill .wish-label {
+    .wish-item .wish-label {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
+      font-size: 1.1rem;
       color: #C96A3A;
       display: block;
+      letter-spacing: 0.05em;
     }
 
-    /* ── Zahlungs-Karten ── */
+    /* ── Zahlungs-Titel ── */
     .zahlung-title {
       text-align: center;
       padding: 0 20px 20px;
@@ -178,6 +177,7 @@
       letter-spacing: 0.15em;
     }
 
+    /* ── Zahlungs-Karten ── */
     .zahlung-section {
       max-width: 900px;
       margin: 0 auto;
@@ -278,16 +278,15 @@
 
   <section class="intro">
     <div class="intro-card">
-      <div class="icon">🏡</div>
       <h2>Keine Dinge – sondern Momente & Träume</h2>
       <p>Das grösste Geschenk ist, dass ihr an unserem Tag dabei seid. Wir haben alles, was wir brauchen – und freuen uns deshalb nicht über materielle Dinge.</p>
-      <p>Was uns wirklich von Herzen freuen würde, ist ein kleiner Beitrag zu unseren zwei grossen Träumen:</p>
+      <p>Was uns wirklich von Herzen freuen würde, ist ein kleiner Zustupf zu unseren zwei grossen Träumen:</p>
       <div class="wishes">
-        <div class="wish-pill">
+        <div class="wish-item">
           <span class="wish-icon">🏠</span>
           <span class="wish-label">Unser Eigenheim</span>
         </div>
-        <div class="wish-pill">
+        <div class="wish-item">
           <span class="wish-icon">✈️</span>
           <span class="wish-label">Unsere nächste Reise</span>
         </div>
@@ -307,8 +306,8 @@
       <h3>TWINT</h3>
       <p>Direkt und unkompliziert per TWINT.</p>
       <p class="detail">
-        Nadia & Michael<br/>
-        +41 78 976 16 11
+        Nadia Hennessy<br/>
+        +41 XX XXX XX XX
       </p>
     </div>
     <div class="zahlung-card">
@@ -317,7 +316,7 @@
       <p>Für alle, die lieber klassisch überweisen möchten.</p>
       <p class="detail">
         IBAN: CH00 0000 0000 0000 0000 0<br/>
-        Nadia & Michael
+        Nadia & Michael Hennessy
       </p>
     </div>
     <div class="zahlung-card">
