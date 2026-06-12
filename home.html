@@ -52,7 +52,7 @@
     /* ── Hero ── */
     .hero {
       text-align: center;
-      padding: 80px 20px 40px;
+      padding: 60px 20px 30px;
     }
 
     .hero-sub {
@@ -72,14 +72,14 @@
       line-height: 1.2;
     }
 
-    /* ── Herz-Trennlinie ── */
+    /* ── Herztrennlinie ── */
     .heart-divider {
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 16px;
       max-width: 320px;
-      margin: 28px auto 20px;
+      margin: 22px auto 18px;
     }
 
     .heart-divider::before,
@@ -102,14 +102,14 @@
       text-transform: uppercase;
       color: #5C6B4F;
       text-align: center;
-      padding-bottom: 40px;
+      padding-bottom: 30px;
     }
 
     /* ── RSVP ── */
     .rsvp-section {
       background: #f0e8df;
       text-align: center;
-      padding: 60px 20px;
+      padding: 50px 20px;
     }
 
     .rsvp-section .label {
@@ -154,11 +154,31 @@
       color: #fff;
     }
 
+    /* ── Sanfter Übergang zur Geschichte ── */
+    .story-bridge {
+      text-align: center;
+      padding: 40px 20px 0;
+    }
+
+    .story-bridge p {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #D4956A;
+    }
+
+    .story-bridge-divider {
+      width: 1px;
+      height: 40px;
+      background: #e8d5c0;
+      margin: 16px auto 0;
+    }
+
     /* ── Timeline ── */
     .timeline-section {
       max-width: 800px;
       margin: 0 auto;
-      padding: 60px 20px 80px;
+      padding: 30px 20px 60px;
     }
 
     .timeline-section h2 {
@@ -168,7 +188,7 @@
       text-align: center;
       letter-spacing: 0.15em;
       color: #C96A3A;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
     }
 
     .timeline {
@@ -188,7 +208,7 @@
 
     .timeline-item {
       position: relative;
-      margin-bottom: 50px;
+      margin-bottom: 36px;
     }
 
     .timeline-item::before {
@@ -257,9 +277,7 @@
       border-bottom: 1px solid #f0e4d8;
     }
 
-    .reisen-list li:last-child {
-      border-bottom: none;
-    }
+    .reisen-list li:last-child { border-bottom: none; }
 
     .reisen-countries {
       font-size: 0.72rem;
@@ -271,7 +289,7 @@
     .galerie-section {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 20px 20px 100px;
+      padding: 20px 20px 80px;
     }
 
     .galerie-section h2 {
@@ -281,7 +299,7 @@
       text-align: center;
       letter-spacing: 0.15em;
       color: #C96A3A;
-      margin-bottom: 40px;
+      margin-bottom: 32px;
     }
 
     .galerie-grid {
@@ -361,6 +379,12 @@
     <p>Wir bitten euch, bis zum <strong>31. März 2027</strong> zu antworten,<br/>damit wir alles perfekt planen können.</p>
     <a href="#" id="rsvp-btn" target="_blank" class="rsvp-btn">Jetzt anmelden</a>
   </section>
+
+  <!-- Sanfter Übergang -->
+  <div class="story-bridge">
+    <p>Und so hat alles begonnen …</p>
+    <div class="story-bridge-divider"></div>
+  </div>
 
   <section class="timeline-section">
     <h2>Wie alles begann</h2>
