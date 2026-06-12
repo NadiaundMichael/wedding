@@ -49,9 +49,10 @@
     .nav-infos,
     .nav-wunsch { display: none; }
 
+    /* ── Hero ── */
     .hero {
       text-align: center;
-      padding: 80px 20px 60px;
+      padding: 60px 20px 36px;
     }
 
     .hero-sub {
@@ -75,7 +76,7 @@
       width: 60px;
       height: 1px;
       background: #C96A3A;
-      margin: 24px auto;
+      margin: 20px auto 20px;
     }
 
     .hero-tagline {
@@ -85,86 +86,132 @@
       color: #5C6B4F;
     }
 
+    /* ── Intro-Text ── */
     .intro {
       max-width: 640px;
       margin: 0 auto;
-      padding: 0 20px 60px;
+      padding: 0 20px 48px;
       text-align: center;
+    }
+
+    .intro-card {
+      background: #fff8f3;
+      border: 1px solid #e8d5c0;
+      border-radius: 12px;
+      padding: 40px 44px;
+    }
+
+    .intro-card .icon {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .intro-card h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 300;
+      color: #C96A3A;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+
+    .intro-card p {
       font-size: 0.82rem;
       line-height: 1.9;
       color: #5C6B4F;
       font-weight: 300;
     }
 
-    .intro p + p { margin-top: 16px; }
-
-    .wunschliste-section {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px 80px;
+    .intro-card p + p {
+      margin-top: 14px;
     }
 
-    .wunschliste-placeholder {
-      background: #fff8f3;
-      border: 1px dashed #C96A3A;
-      border-radius: 12px;
-      padding: 80px 40px;
+    .intro-card .wishes {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin: 28px 0 24px;
+      flex-wrap: wrap;
+    }
+
+    .wish-pill {
+      background: #f0e8df;
+      border: 1px solid #e8d5c0;
+      border-radius: 40px;
+      padding: 12px 24px;
       text-align: center;
     }
 
-    .wunschliste-placeholder .icon {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
+    .wish-pill .wish-icon {
+      font-size: 1.4rem;
+      display: block;
+      margin-bottom: 6px;
     }
 
-    .wunschliste-placeholder h3 {
+    .wish-pill .wish-label {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 300;
-      margin-bottom: 12px;
+      font-size: 1rem;
       color: #C96A3A;
+      display: block;
     }
 
-    .wunschliste-placeholder p {
-      font-size: 0.78rem;
-      color: #5C6B4F;
-      line-height: 1.8;
+    /* ── Zahlungs-Karten ── */
+    .zahlung-title {
+      text-align: center;
+      padding: 0 20px 20px;
+    }
+
+    .zahlung-title .label {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: #D4956A;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .zahlung-title h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300;
+      color: #C96A3A;
+      letter-spacing: 0.15em;
     }
 
     .zahlung-section {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 0 20px 100px;
+      padding: 0 20px 80px;
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
     }
 
     .zahlung-card {
       background: #fff8f3;
       border: 1px solid #e8d5c0;
       border-radius: 12px;
-      padding: 36px 28px;
+      padding: 32px 24px;
       text-align: center;
     }
 
     .zahlung-card .icon {
       font-size: 1.8rem;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
     }
 
     .zahlung-card h3 {
       font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       font-weight: 400;
       color: #D4956A;
       letter-spacing: 0.1em;
-      margin-bottom: 16px;
+      margin-bottom: 12px;
     }
 
     .zahlung-card p {
       font-size: 0.78rem;
-      line-height: 1.9;
+      line-height: 1.8;
       color: #5C6B4F;
       font-weight: 300;
     }
@@ -177,6 +224,7 @@
       line-height: 1.7;
     }
 
+    /* ── Footer ── */
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -201,12 +249,12 @@
       text-decoration: none;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       nav { padding: 16px 20px; }
       .nav-logo { font-size: 1rem; }
       .nav-links a { margin-left: 16px; font-size: 0.65rem; }
-      .wunschliste-placeholder { padding: 60px 20px; }
       .zahlung-section { grid-template-columns: 1fr; }
+      .intro-card { padding: 32px 24px; }
     }
   </style>
 </head>
@@ -225,30 +273,42 @@
     <p class="hero-sub">17. Juli 2027</p>
     <h1>Wunschliste</h1>
     <div class="hero-divider"></div>
-    <p class="hero-tagline">Unsere Wünsche für den Start ins gemeinsame Leben</p>
+    <p class="hero-tagline">Was uns wirklich glücklich macht</p>
   </div>
 
   <section class="intro">
-    <p>Das grösste Geschenk ist, dass ihr an unserem Tag dabei seid. Wer uns trotzdem eine Freude machen möchte, findet hier unsere Wunschliste.</p>
-    <p>Ihr könnt gerne auch zu einem grösseren Wunsch gemeinsam beitragen — jeder Betrag ist willkommen und von Herzen geschätzt.</p>
-  </section>
-
-  <section class="wunschliste-section">
-    <div class="wunschliste-placeholder">
-      <div class="icon">🎁</div>
-      <h3>Unsere Wunschliste</h3>
-      <p>Die Wunschliste wird in Kürze hier eingebettet.<br/>Sobald wir uns für ein Tool entschieden haben, erscheint sie direkt hier.</p>
+    <div class="intro-card">
+      <div class="icon">🏡</div>
+      <h2>Keine Dinge – sondern Momente & Träume</h2>
+      <p>Das grösste Geschenk ist, dass ihr an unserem Tag dabei seid. Wir haben alles, was wir brauchen – und freuen uns deshalb nicht über materielle Dinge.</p>
+      <p>Was uns wirklich von Herzen freuen würde, ist ein kleiner Beitrag zu unseren zwei grossen Träumen:</p>
+      <div class="wishes">
+        <div class="wish-pill">
+          <span class="wish-icon">🏠</span>
+          <span class="wish-label">Unser Eigenheim</span>
+        </div>
+        <div class="wish-pill">
+          <span class="wish-icon">✈️</span>
+          <span class="wish-label">Unsere nächste Reise</span>
+        </div>
+      </div>
+      <p>Jeder Betrag ist willkommen und wird von uns beiden von Herzen geschätzt. Ihr könnt gerne auch gemeinsam mit anderen zusammenlegen.</p>
     </div>
   </section>
+
+  <div class="zahlung-title">
+    <span class="label">So könnt ihr uns eine Freude machen</span>
+    <h2>Zustupf-Möglichkeiten</h2>
+  </div>
 
   <section class="zahlung-section">
     <div class="zahlung-card">
       <div class="icon">📱</div>
       <h3>TWINT</h3>
-      <p>Ihr könnt uns direkt per TWINT etwas zukommen lassen.</p>
+      <p>Direkt und unkompliziert per TWINT.</p>
       <p class="detail">
-        Nadia Hennessy<br/>
-        +41 XX XXX XX XX
+        Nadia & Michael<br/>
+        +41 78 976 16 11
       </p>
     </div>
     <div class="zahlung-card">
@@ -257,8 +317,13 @@
       <p>Für alle, die lieber klassisch überweisen möchten.</p>
       <p class="detail">
         IBAN: CH00 0000 0000 0000 0000 0<br/>
-        Nadia & Michael Hennessy
+        Nadia & Michael
       </p>
+    </div>
+    <div class="zahlung-card">
+      <div class="icon">🎀</div>
+      <h3>Kässeli</h3>
+      <p>Wer es persönlicher mag: An der Hochzeit steht ein Kässeli bereit, in das ihr euren Umschlag legen könnt.</p>
     </div>
   </section>
 
