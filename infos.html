@@ -52,7 +52,7 @@
     /* ── Hero ── */
     .hero {
       text-align: center;
-      padding: 80px 20px 50px;
+      padding: 60px 20px 36px;
     }
 
     .hero-sub {
@@ -76,13 +76,13 @@
       width: 60px;
       height: 1px;
       background: #C96A3A;
-      margin: 24px auto 0;
+      margin: 20px auto 0;
     }
 
     /* ── Sektions-Titel ── */
     .section-title {
       text-align: center;
-      padding: 30px 20px 20px;
+      padding: 28px 20px 16px;
     }
 
     .section-title .label {
@@ -90,7 +90,7 @@
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: #D4956A;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       display: block;
     }
 
@@ -106,12 +106,12 @@
       width: 40px;
       height: 1px;
       background: #e8d5c0;
-      margin: 16px auto 0;
+      margin: 12px auto 0;
     }
 
     /* ── Countdown ── */
     .countdown-wrap {
-      padding: 0 20px 40px;
+      padding: 0 20px 32px;
     }
 
     .countdown-grid {
@@ -125,7 +125,7 @@
       background: #fff8f3;
       border: 1px solid #e8d5c0;
       border-radius: 12px;
-      padding: 28px 32px;
+      padding: 24px 28px;
       min-width: 120px;
       text-align: center;
     }
@@ -158,35 +158,21 @@
     .info-wrap {
       max-width: 600px;
       margin: 0 auto;
-      padding: 0 20px 60px;
+      padding: 0 20px 40px;
     }
 
     .info-card {
       background: #fff8f3;
       border: 1px solid #e8d5c0;
       border-radius: 12px;
-      padding: 36px 40px;
+      padding: 32px 40px;
       text-align: center;
-    }
-
-    .info-card .icon {
-      font-size: 1.8rem;
-      margin-bottom: 16px;
-    }
-
-    .info-card h3 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.4rem;
-      font-weight: 400;
-      color: #D4956A;
-      letter-spacing: 0.1em;
-      margin-bottom: 20px;
     }
 
     .info-card .detail-row {
       display: flex;
       justify-content: center;
-      gap: 40px;
+      gap: 32px;
       flex-wrap: wrap;
     }
 
@@ -219,18 +205,27 @@
       margin-top: 4px;
     }
 
+    .info-card .detail-value .detail-note {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      color: #5C6B4F;
+      font-style: italic;
+      display: block;
+      margin-top: 4px;
+    }
+
     /* ── Dresscode ── */
     .dresscode-wrap {
       max-width: 600px;
       margin: 0 auto;
-      padding: 0 20px 60px;
+      padding: 0 20px 40px;
     }
 
     .dresscode-box {
       background: #fff8f3;
       border: 1px solid #e8d5c0;
       border-radius: 12px;
-      padding: 40px;
+      padding: 36px 40px;
       text-align: center;
     }
 
@@ -309,7 +304,7 @@
     .rsvp-section {
       background: #f0e8df;
       text-align: center;
-      padding: 60px 20px 80px;
+      padding: 50px 20px 60px;
     }
 
     .rsvp-section .label {
@@ -385,7 +380,8 @@
       .nav-links a { margin-left: 16px; font-size: 0.65rem; }
       .countdown-box { min-width: 90px; padding: 20px 16px; }
       .dresscode-grid { grid-template-columns: 1fr; }
-      .info-card .detail-row { gap: 24px; }
+      .info-card .detail-row { gap: 20px; }
+      .info-card { padding: 28px 24px; }
     }
   </style>
 </head>
@@ -448,8 +444,14 @@
         </div>
         <div class="detail-item">
           <span class="detail-label">Ort</span>
-          <span class="detail-value">Frauenfeld<br/>
-            <span style="font-family:'Montserrat',sans-serif; font-size:0.72rem; color:#5C6B4F; font-style:italic;">Details folgen</span>
+          <span class="detail-value">Frauenfeld
+            <span class="detail-note">Details folgen</span>
+          </span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Parkplätze</span>
+          <span class="detail-value">
+            <span class="detail-note">Details folgen</span>
           </span>
         </div>
       </div>
@@ -476,6 +478,12 @@
             <span class="detail-label">Ort</span>
             <span class="detail-value">Aachhuus
               <a href="https://maps.app.goo.gl/cbR9bCeGtSdXFEQW9" target="_blank">↗ Google Maps</a>
+            </span>
+          </div>
+          <div class="detail-item">
+            <span class="detail-label">Parkplätze</span>
+            <span class="detail-value">
+              <span class="detail-note">Genügend vorhanden<br/>direkt vor dem Aachhuus</span>
             </span>
           </div>
         </div>
@@ -553,7 +561,7 @@
         rsvpBtn.href = 'https://docs.google.com/forms/d/e/1FAIpQLScpeH6tp2maiEYcViqHFCe-tiYBKmNYS4B47XQoLdVbw0OXLA/viewform?usp=dialog';
       }
 
-      // ── Countdown (Tage, Stunden, Minuten) ──
+      // ── Countdown ──
       const target = new Date('2027-07-17T14:00:00');
 
       function updateCountdown() {
