@@ -72,29 +72,11 @@
       line-height: 1.15;
     }
 
-    /* ── Herztrennlinie ── */
-    .heart-divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      max-width: 320px;
-      margin: 14px auto 10px;
-    }
-
-    .heart-divider::before,
-    .heart-divider::after {
-      content: '';
-      flex: 1;
+    .hero-divider {
+      width: 60px;
       height: 1px;
-      background: #e8d5c0;
-    }
-
-    .heart-divider span {
-      color: #C96A3A;
-      font-size: 1.1rem;
-      line-height: 1;
-      font-family: Georgia, serif;
+      background: #C96A3A;
+      margin: 20px auto 0;
     }
 
     .hero-tagline {
@@ -103,7 +85,16 @@
       text-transform: uppercase;
       color: #5C6B4F;
       text-align: center;
-      padding-bottom: 16px;
+      padding: 16px 0;
+    }
+
+    /* ── Schlichte Trennlinie ── */
+    .simple-divider {
+      width: 100%;
+      max-width: 300px;
+      height: 1px;
+      background: #e8d5c0;
+      margin: 28px auto;
     }
 
     /* ── RSVP ── */
@@ -155,75 +146,11 @@
       color: #fff;
     }
 
-    /* ── Sanfter Übergang zur Geschichte ── */
-    .story-bridge {
-      text-align: center;
-      padding: 24px 20px 0;
-    }
-
-    .story-bridge p {
-      font-size: 0.72rem;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: #D4956A;
-    }
-
-    .story-bridge-arrow {
-      font-size: 1.1rem;
-      color: #C96A3A;
-      margin: 10px auto 0;
-      display: block;
-      text-align: center;
-      line-height: 1;
-      animation: bounce 1.8s infinite;
-    }
-
-    @keyframes bounce {
-      0%, 100% { transform: translateY(0); }
-      50%       { transform: translateY(5px); }
-    }
-
-    /* ── Ornament-Trennlinie (geteilt, zentriert) ── */
-    .ornament-divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      max-width: 400px;
-      margin: 28px auto;
-      padding: 0 20px;
-    }
-
-    .ornament-divider::before,
-    .ornament-divider::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: #e8d5c0;
-    }
-
-    .ornament-divider span {
-      color: #C96A3A;
-      font-size: 1.1rem;
-      line-height: 1;
-      font-family: Georgia, serif;
-    }
-
     /* ── Timeline ── */
     .timeline-section {
       max-width: 800px;
       margin: 0 auto;
-      padding: 16px 20px 60px;
-    }
-
-    .timeline-section h2 {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.8rem;
-      font-weight: 300;
-      text-align: center;
-      letter-spacing: 0.15em;
-      color: #C96A3A;
-      margin-bottom: 40px;
+      padding: 16px 20px 32px;
     }
 
     .timeline {
@@ -401,13 +328,15 @@
     </div>
   </nav>
 
+  <!-- Hero -->
   <div class="hero">
     <p class="hero-sub">17. Juli 2027</p>
     <h1>Nadia<br>&amp;<br>Michael</h1>
-    <div class="heart-divider"><span>❦</span></div>
+    <div class="hero-divider"></div>
     <p class="hero-tagline">Unsere Hochzeit</p>
   </div>
 
+  <!-- RSVP -->
   <section class="rsvp-section">
     <span class="label">Anmeldung</span>
     <h2>Seid ihr dabei?</h2>
@@ -415,15 +344,9 @@
     <a href="#" id="rsvp-btn" target="_blank" class="rsvp-btn">Jetzt anmelden</a>
   </section>
 
-  <!-- Sanfter Übergang -->
-  <div class="story-bridge">
-    <p>Und so hat alles begonnen …</p>
-    <span class="story-bridge-arrow">↓</span>
-  </div>
-
+  <!-- Timeline -->
   <section class="timeline-section">
-    <div class="ornament-divider"><span>❧</span></div>
-    <h2>Wie alles begann</h2>
+    <div class="simple-divider"></div>
     <div class="timeline">
 
       <div class="timeline-item">
@@ -475,8 +398,10 @@
     </div>
   </section>
 
-  <div class="ornament-divider"><span>❧</span></div>
+  <!-- Trennlinie vor Galerie -->
+  <div class="simple-divider"></div>
 
+  <!-- Galerie -->
   <section class="galerie-section">
     <h2>Unsere Momente</h2>
     <div class="galerie-grid">
