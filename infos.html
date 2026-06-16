@@ -79,6 +79,32 @@
       margin: 20px auto 0;
     }
 
+    /* ── Ornament-Trennlinie ── */
+    .ornament-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      max-width: 400px;
+      margin: 28px auto;
+      padding: 0 20px;
+    }
+
+    .ornament-divider::before,
+    .ornament-divider::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #e8d5c0;
+    }
+
+    .ornament-divider span {
+      color: #C96A3A;
+      font-size: 1.1rem;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+
     /* ── Sektions-Titel ── */
     .section-title {
       text-align: center;
@@ -100,13 +126,6 @@
       font-weight: 300;
       color: #C96A3A;
       letter-spacing: 0.15em;
-    }
-
-    .section-divider {
-      width: 40px;
-      height: 1px;
-      background: #e8d5c0;
-      margin: 12px auto 0;
     }
 
     /* ── Countdown ── */
@@ -144,14 +163,6 @@
       letter-spacing: 0.3em;
       text-transform: uppercase;
       color: #D4956A;
-    }
-
-    /* ── Trennlinie zwischen Blöcken ── */
-    .block-separator {
-      max-width: 860px;
-      margin: 0 auto;
-      border: none;
-      border-top: 1px solid #e8d5c0;
     }
 
     /* ── Info-Kästchen ── */
@@ -203,6 +214,10 @@
       text-decoration: none;
       display: block;
       margin-top: 4px;
+    }
+
+    .info-card .detail-value a:hover {
+      text-decoration: underline;
     }
 
     .info-card .detail-value .detail-note {
@@ -403,11 +418,13 @@
     <div class="hero-divider"></div>
   </div>
 
+  <!-- Ornament nach Hero -->
+  <div class="ornament-divider"><span>❧</span></div>
+
   <!-- 2. Countdown -->
   <div class="section-title">
     <span class="label">Wir freuen uns auf euch</span>
     <h2>Bis es so weit ist</h2>
-    <div class="section-divider"></div>
   </div>
 
   <div class="countdown-wrap">
@@ -428,11 +445,10 @@
   </div>
 
   <!-- 3. Apéro -->
-  <hr class="block-separator"/>
+  <div class="ornament-divider"><span>❧</span></div>
   <div class="section-title">
     <span class="label">Standesamt & Apéro</span>
     <h2>🥂 Apéro</h2>
-    <div class="section-divider"></div>
   </div>
 
   <div class="info-wrap">
@@ -460,11 +476,10 @@
 
   <!-- 4. Dinner (nur für Dinner-Gäste) -->
   <div id="block-dinner" style="display:none;">
-    <hr class="block-separator"/>
+    <div class="ornament-divider"><span>❧</span></div>
     <div class="section-title">
       <span class="label">Abendfeier · Aachhuus · Salmsach</span>
       <h2>🍽️ Dinner</h2>
-      <div class="section-divider"></div>
     </div>
 
     <div class="info-wrap">
@@ -477,7 +492,7 @@
           <div class="detail-item">
             <span class="detail-label">Ort</span>
             <span class="detail-value">Aachhuus
-              <a href="https://maps.app.goo.gl/cbR9bCeGtSdXFEQW9" target="_blank">↗ Google Maps</a>
+              <a href="https://maps.app.goo.gl/cbR9bCeGtSdXFEQW9" target="_blank">Google Maps</a>
             </span>
           </div>
           <div class="detail-item">
@@ -524,6 +539,7 @@
   </div>
 
   <!-- 5. RSVP -->
+  <div class="ornament-divider"><span>❧</span></div>
   <section class="rsvp-section">
     <span class="label">Anmeldung</span>
     <h2>Seid ihr dabei?</h2>
