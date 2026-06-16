@@ -146,11 +146,39 @@
       color: #fff;
     }
 
+    /* ── Story Bridge ── */
+    .story-bridge {
+      text-align: center;
+      padding: 24px 20px 0;
+    }
+
+    .story-bridge p {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #D4956A;
+    }
+
+    .story-bridge-arrow {
+      font-size: 1.1rem;
+      color: #C96A3A;
+      margin: 10px auto 0;
+      display: block;
+      text-align: center;
+      line-height: 1;
+      animation: bounce 1.8s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(5px); }
+    }
+
     /* ── Timeline ── */
     .timeline-section {
       max-width: 800px;
       margin: 0 auto;
-      padding: 16px 20px 32px;
+      padding: 24px 20px 20px;
     }
 
     .timeline {
@@ -344,9 +372,14 @@
     <a href="#" id="rsvp-btn" target="_blank" class="rsvp-btn">Jetzt anmelden</a>
   </section>
 
-  <!-- Timeline -->
+  <!-- Story Bridge -->
+  <div class="story-bridge">
+    <p>Und so hat alles begonnen …</p>
+    <span class="story-bridge-arrow">↓</span>
+  </div>
+
+  <!-- Timeline (kein Divider davor) -->
   <section class="timeline-section">
-    <div class="simple-divider"></div>
     <div class="timeline">
 
       <div class="timeline-item">
