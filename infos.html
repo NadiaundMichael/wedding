@@ -79,36 +79,19 @@
       margin: 20px auto 0;
     }
 
-    /* ── Ornament-Trennlinie ── */
-    .ornament-divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      max-width: 400px;
-      margin: 28px auto;
-      padding: 0 20px;
-    }
-
-    .ornament-divider::before,
-    .ornament-divider::after {
-      content: '';
-      flex: 1;
+    /* ── Schlichte Trennlinie ── */
+    .simple-divider {
+      width: 100%;
+      max-width: 300px;
       height: 1px;
       background: #e8d5c0;
-    }
-
-    .ornament-divider span {
-      color: #C96A3A;
-      font-size: 1.1rem;
-      line-height: 1;
-      font-family: Georgia, serif;
+      margin: 28px auto;
     }
 
     /* ── Sektions-Titel ── */
     .section-title {
       text-align: center;
-      padding: 28px 20px 16px;
+      padding: 16px 20px 12px;
     }
 
     .section-title .label {
@@ -130,7 +113,7 @@
 
     /* ── Countdown ── */
     .countdown-wrap {
-      padding: 0 20px 32px;
+      padding: 0 20px 20px;
     }
 
     .countdown-grid {
@@ -418,9 +401,6 @@
     <div class="hero-divider"></div>
   </div>
 
-  <!-- Ornament nach Hero -->
-  <div class="ornament-divider"><span>❧</span></div>
-
   <!-- 2. Countdown -->
   <div class="section-title">
     <span class="label">Wir freuen uns auf euch</span>
@@ -444,8 +424,10 @@
     </div>
   </div>
 
+  <!-- Trennlinie nach Countdown -->
+  <div class="simple-divider"></div>
+
   <!-- 3. Apéro -->
-  <div class="ornament-divider"><span>❧</span></div>
   <div class="section-title">
     <span class="label">Standesamt & Apéro</span>
     <h2>🥂 Apéro</h2>
@@ -476,7 +458,7 @@
 
   <!-- 4. Dinner (nur für Dinner-Gäste) -->
   <div id="block-dinner" style="display:none;">
-    <div class="ornament-divider"><span>❧</span></div>
+    <div class="simple-divider"></div>
     <div class="section-title">
       <span class="label">Abendfeier · Aachhuus · Salmsach</span>
       <h2>🍽️ Dinner</h2>
@@ -539,7 +521,6 @@
   </div>
 
   <!-- 5. RSVP -->
-  <div class="ornament-divider"><span>❧</span></div>
   <section class="rsvp-section">
     <span class="label">Anmeldung</span>
     <h2>Seid ihr dabei?</h2>
