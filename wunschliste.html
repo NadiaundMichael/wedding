@@ -86,30 +86,13 @@
       color: #5C6B4F;
     }
 
-    /* ── Ornament-Trennlinie ── */
-    .ornament-divider {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 16px;
-      max-width: 400px;
-      margin: 28px auto;
-      padding: 0 20px;
-    }
-
-    .ornament-divider::before,
-    .ornament-divider::after {
-      content: '';
-      flex: 1;
+    /* ── Schlichte Trennlinie ── */
+    .simple-divider {
+      width: 100%;
+      max-width: 300px;
       height: 1px;
       background: #e8d5c0;
-    }
-
-    .ornament-divider span {
-      color: #C96A3A;
-      font-size: 1.1rem;
-      line-height: 1;
-      font-family: Georgia, serif;
+      margin: 28px auto;
     }
 
     /* ── Intro-Karte ── */
@@ -295,6 +278,7 @@
     </div>
   </nav>
 
+  <!-- Hero -->
   <div class="hero">
     <p class="hero-sub">17. Juli 2027</p>
     <h1>Wunschliste</h1>
@@ -302,8 +286,10 @@
     <p class="hero-tagline">Was uns wirklich glücklich macht</p>
   </div>
 
-  <div class="ornament-divider"><span>❧</span></div>
+  <!-- Trennlinie nach Hero -->
+  <div class="simple-divider"></div>
 
+  <!-- Intro -->
   <section class="intro">
     <div class="intro-card">
       <h2>Keine Dinge – sondern Momente & Träume</h2>
@@ -323,13 +309,16 @@
     </div>
   </section>
 
-  <div class="ornament-divider"><span>❧</span></div>
+  <!-- Trennlinie vor Zahlungsoptionen -->
+  <div class="simple-divider"></div>
 
+  <!-- Zahlungs-Titel -->
   <div class="zahlung-title">
     <span class="label">So könnt ihr uns eine Freude machen</span>
     <h2>Zustupf-Möglichkeiten</h2>
   </div>
 
+  <!-- Zahlungs-Karten -->
   <section class="zahlung-section">
     <div class="zahlung-card">
       <div class="icon">📱</div>
@@ -345,7 +334,7 @@
       <h3>Banküberweisung</h3>
       <p>Für alle, die lieber klassisch überweisen möchten.</p>
       <p class="detail">
-        IBAN: CH00 0000 0000 0000 0000 0<br/>
+        IBAN: CH98 0830 7000 4694 7830 6<br/>
         Nadia & Michael
       </p>
     </div>
